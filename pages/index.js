@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Herosection from "../components/Herosection";
+import Meals from "../components/Meals";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
 
       <main>
         <Herosection/>
+        <Meals />
       </main>
     </div>
   );

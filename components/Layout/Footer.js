@@ -8,7 +8,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className=" font-semibold text-slate-700 underline">Rohan ahire</span>
+            <span className=" font-semibold text-slate-400 underline">Rohan ahire</span>
           </a>
         </h4>
       </div>
