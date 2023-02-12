@@ -25,6 +25,7 @@ function MealCard({ mealName, mealDescription, mealPrice }) {
             id="points"
             min={1}
             max={5}
+            defaultValue={1}
             name="points"
             step="1"
             className=" w-16 border

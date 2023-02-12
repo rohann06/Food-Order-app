@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+// import CartModal from "../components/CartModal";
 import Herosection from "../components/Herosection";
 import Meals from "../components/Meals";
 
@@ -15,6 +15,7 @@ export default function Home() {
       <main>
         <Herosection/>
         <Meals />
+        {/* <CartModal isVisible/> */}
       </main>
     </div>
   );
