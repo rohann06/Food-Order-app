@@ -1,4 +1,5 @@
 import React from "react";
+import { HiOutlinePlusSm, HiMinusSm } from "react-icons/hi";
 
 function MealCard({ mealName, mealDescription, mealPrice }) {
   return (
@@ -13,24 +14,22 @@ function MealCard({ mealName, mealDescription, mealPrice }) {
         </p>
       </div>
       <div>
-        <div className=" flex gap-2 items-center">
+        <div className=" flex gap-1 items-center">
           <label
             htmlFor="amount"
             className=" font-Nunito font-semibold lg:font-bold"
           >
-            Quantity
+            Qty:
           </label>
-          <input
-            type="number"
-            id="points"
-            min={1}
-            max={5}
-            defaultValue={1}
-            name="points"
-            step="1"
-            className=" w-16 border
-           lg:border-2 border-black pl-6 lg:pl-2 text-lg"
-          />
+          <div className=" flex gap-2 lg:gap-3 border lg:border-2 border-black">
+            <button className=" font-bold text-lg px-2 py-1 ">
+              <HiOutlinePlusSm />
+            </button>
+
+            <span className=" font-semibold text-lg">1</span>
+
+            <button className=" font-bold px-2 "> <HiMinusSm/> </button>
+          </div>
         </div>
         <button className=" bg-red-900 hover:bg-red-700 text-slate-50 font-Nunito font-bold rounded-lg py-1 px-3 lg:px-4 mt-4 lg:mt-6 ml-16">
           + Add
