@@ -1,7 +1,10 @@
 import React from "react";
 import { HiOutlinePlusSm, HiMinusSm } from "react-icons/hi";
+import { useCartContext } from "../context/CartContext";
 
 function MealCard({ mealName, mealDescription, mealPrice }) {
+  const { decQty, incQty, qty } = useCartContext();
+
   return (
     <div className=" bg-slate-100 rounded-xl p-3 lg:p-5 my-5 lg:my-7 shadow-lg shadow-slate-50/40 flex justify-between">
       <div>
@@ -22,13 +25,18 @@ function MealCard({ mealName, mealDescription, mealPrice }) {
             Qty:
           </label>
           <div className=" flex gap-2 lg:gap-3 border lg:border-2 border-black">
-            <button className=" font-bold text-lg px-2 py-1 ">
+            <button
+              onClick={incQty}
+              className=" font-bold text-lg px-2 py-1 bg-red-100"
+            >
               <HiOutlinePlusSm />
             </button>
 
-            <span className=" font-semibold text-lg">1</span>
+            <span className=" font-semibold text-lg">{qty}</span>
 
-            <button className=" font-bold px-2 "> <HiMinusSm/> </button>
+            <button onClick={decQty} className=" font-bold px-2 bg-red-100">
+              <HiMinusSm />
+            </button>
           </div>
         </div>
         <button className=" bg-red-900 hover:bg-red-700 text-slate-50 font-Nunito font-bold rounded-lg py-1 px-3 lg:px-4 mt-4 lg:mt-6 ml-16">
