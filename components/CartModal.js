@@ -15,8 +15,8 @@ const CART_MEALS = [
   },
 ];
 
-function CartModal({ isVisible, onClose }) {
-  if (!isVisible) return null;
+function CartModal() {
+  // if (!isVisible) return null;
 
   return (
     <div className=" fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center">
@@ -45,7 +45,7 @@ function CartModal({ isVisible, onClose }) {
           </div>
           <div className=" flex gap-3">
             <button
-              onClick={() => onClose()}
+              // onClick={() => onClose()}
               className=" font-bold text-sm border-2 px-3 py-2 rounded-full hover:border-red-600 hover:text-red-600"
             >
               Cancel
