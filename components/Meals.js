@@ -35,7 +35,7 @@ function Meals() {
       {DUMMY_MEALS.map((meal) => {
         return (
           <div key={meal.id}>
-            <MealCard mealName={meal.name} mealDescription={meal.description} mealPrice={meal.price}/>
+            <MealCard mealName={meal.name} mealDescription={meal.description} mealPrice={meal.price} mealId={meal.id}/>
           </div>
         );
       })}

@@ -2,8 +2,8 @@ import React from "react";
 import { HiOutlinePlusSm, HiMinusSm } from "react-icons/hi";
 import { useCartContext } from "../context/CartContext";
 
-function MealCard({ mealName, mealDescription, mealPrice }) {
-  const { decQty, incQty, qty } = useCartContext();
+function MealCard({ mealName, mealDescription, mealPrice, mealId }) {
+  const { decQty, incQty, qty, onAdd } = useCartContext();
 
   return (
     <div className=" bg-slate-100 rounded-xl p-3 lg:p-5 my-5 lg:my-7 shadow-lg shadow-slate-50/40 flex justify-between">
@@ -39,7 +39,10 @@ function MealCard({ mealName, mealDescription, mealPrice }) {
             </button>
           </div>
         </div>
-        <button className=" bg-red-900 hover:bg-red-700 text-slate-50 font-Nunito font-bold rounded-lg py-1 px-3 lg:px-4 mt-4 lg:mt-6 ml-16">
+        <button
+          onClick={() => onAdd(mealName, mealPrice, mealId, qty)}
+          className=" bg-red-900 hover:bg-red-700 text-slate-50 font-Nunito font-bold rounded-lg py-1 px-3 lg:px-4 mt-4 lg:mt-6 ml-16"
+        >
           + Add
         </button>
       </div>

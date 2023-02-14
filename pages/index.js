@@ -1,9 +1,12 @@
 import Head from "next/head";
-// import CartModal from "../components/CartModal";
+import CartModal from "../components/CartModal";
 import Herosection from "../components/Herosection";
 import Meals from "../components/Meals";
+import { useCartContext } from "../context/CartContext";
 
 export default function Home() {
+  const { sahowCart } = useCartContext();
+
   return (
     <div>
       <Head>
@@ -13,9 +16,9 @@ export default function Home() {
       </Head>
 
       <main>
-        <Herosection/>
+        <Herosection />
         <Meals />
-        {/* <CartModal isVisible/> */}
+        {sahowCart && <CartModal />}
       </main>
     </div>
   );
